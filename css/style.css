@@ -27,3 +27,44 @@ a {
     --grey:#7A7D81;
     --darkGrey:#282828
 }
+
+header{
+    background-color: black;
+}
+
+main{
+    background-color: #141922;
+}
+
+aside{
+    background-color: var(--darkGrey);
+}
+
+header, main{
+    height: calc(100vh - 90px);
+}
+
+header{
+    width: 230px;
+}
+
+main{
+    width: calc( 100% - 230px);
+}
+aside{
+    height: 90px;
+}
+
+
+.screen-container{
+    display: flex;
+}
+
+@media screen and (max-width: 552px ) {
+    header{
+        width: 50px;
+    }
+    main{
+        width: calc( 100% - 50px);
+    }
+}
