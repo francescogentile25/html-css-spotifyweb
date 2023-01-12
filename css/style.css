@@ -34,6 +34,8 @@ header{
 
 main{
     background-color: #141922;
+    overflow-y: scroll;
+    min-height: 2000px;
 }
 
 aside{
