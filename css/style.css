@@ -39,6 +39,8 @@ header{
     background-color: black;
     overflow: hidden;
     flex-basis: 230px;
+    display: flex;
+    flex-direction: column;
 }
 
 main{
@@ -79,6 +81,7 @@ MEDIAQUERY MARKUP PAGE
 ASIDE 
 *****/
 
+/* LEFT SECTION */
 .row-player{
     justify-content: space-between;
 }
@@ -94,37 +97,18 @@ ASIDE
 }
 
 .cover-song-button{
+    align-content: center;
     display: flex;
     gap:13px;
 }
+
+
+/* CENTRAL SECTION */
+
 .player-song{
     flex-basis: 30%;
 }
 
-.share-song{
-    color: white;
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    gap:25px
-
-}
-
-.player-time{
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
-}
-
-.time-line{
-    width: 100%;
-    margin: 0 25px ;
-    border-radius: 50px;
-    height: 4px;
-    background-color: var(--grey);
-
-}
 .playerbutton{
     gap: 22px;
     display: flex;
@@ -134,13 +118,49 @@ ASIDE
     color: white;
 }
 
-.volume-slider{
-    width: 118px;
+.player-time{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.time-line{
+    width: 100%;
+    margin: 0 25px ;
+    border-radius: 50px;
     height: 4px;
     background-color: var(--grey);
-    border-radius: 20px;
+}
+
+/* RIGHT SECTION */
+
+.share-song{
+    display: flex;
+    padding: 4px;
+    align-content: center;
+    justify-content: space-between;
+    font-size: 18px;
+    color: white;
+}
+.volume{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-grow: 1;
+
 
 }
+.volume-slider{
+    flex-basis: 100%;
+    background-color: var(--grey);
+    border-radius: 20px;
+    height: 4px;
+
+}
+
+/***************** 
+MEDIA QUERY ASIDE 
+******************/
 
 @media screen and (max-width: 639px) {
     .cover-song-button{
@@ -149,5 +169,112 @@ ASIDE
     
 }
 
+
+.logo{
+    min-height: 60px;
+    background-color: red;
+}
+
+.header-button{
+    min-height: 100px;
+    background-color: blue;
+}
+
+.playlist{
+    min-height: 300px;
+    background-color: green;
+}
+
+
+.install-app{
+    min-height: 30px;
+    background-color: orange;
+    margin-top: auto;
+}
+
+.profile{
+    min-height: 30px;
+    background-color: aqua;
+}
+
+@media screen and (max-width:552px) {
+    header{
+        padding: 7px;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+.share-song{
+    justify-content: flex-end;
+    flex-shrink: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-basis: 20%;
+    font-size: 18px;
+    gap:25px
+
+}
+
+
+
+
+
 .volume{
-    display: flex;}
+    display: flex;
+    flex-grow: 1;
+}
+.volume-slider{
+    height: 4px;
+    width: 100%;
+    background-color: var(--grey);
+    border-radius: 20px;
+    max-width: 117px;
+} */
