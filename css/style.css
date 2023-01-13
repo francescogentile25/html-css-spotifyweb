@@ -1,14 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
+/***********
+GENERIC RULE
+************/
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-body{
-    font-family: 'Open Sans', sans-serif;
+:root{
+    --grey:#7A7D81;
+    --darkGrey:#282828
 }
+body{
+    font-family: 'Open Sans', sans-serif;}
 img{
-    width: 100%;
+    max-width: 100%;
 }
 
 ul,
@@ -22,46 +28,40 @@ a {
     text-decoration: none;
     color: currentColor;
 }
-
-:root{
-    --grey:#7A7D81;
-    --darkGrey:#282828
+.row{
+    display: flex;
 }
 
+/**********
+MARKUP PAGE
+**********/
 header{
     background-color: black;
+    width: 230px;
 }
 
 main{
     background-color: #141922;
     overflow-y: scroll;
-    min-height: 2000px;
-}
-
-aside{
-    background-color: var(--darkGrey);
+    width: calc( 100% - 230px);
 }
 
 header, main{
     height: calc(100vh - 90px);
 }
 
-header{
-    width: 230px;
-}
-
-main{
-    width: calc( 100% - 230px);
-}
 aside{
     height: 90px;
+    background-color: var(--darkGrey);
 }
-
 
 .screen-container{
     display: flex;
 }
 
+/**********************
+MEDIAQUERY MARKUP PAGE
+***********************/
 @media screen and (max-width: 552px ) {
     header{
         width: 50px;
@@ -69,4 +69,79 @@ aside{
     main{
         width: calc( 100% - 50px);
     }
+}
+
+/****
+ASIDE 
+*****/
+
+.row-player{
+    justify-content: space-between;
+}
+
+.cover-song{
+    padding: 21px;
+    display: flex;
+    height: 90px;
+    color: var(--grey)
+}
+
+.song-info{
+    margin:0 13px;
+}
+
+.cover-song-button{
+    display: flex;
+    gap:13px;
+}
+.player-song{
+    flex-basis: 30%;
+}
+
+.share-song{
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    gap:25px
+
+}
+
+.player-time{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.time-line{
+    width: 100%;
+    margin: 0 25px ;
+    border-radius: 50px;
+    height: 4px;
+    background-color: var(--grey);
+
+}
+.playerbutton{
+    gap: 22px;
+    padding: 12px 0;
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+    color: white;
+}
+
+.volume-slider{
+    width: 118px;
+    height: 4px;
+    background-color: var(--grey);
+    border-radius: 20px;
+
+}
+
+@media screen and (max-width: 639px) {
+    .cover-song-button{
+        flex-wrap: wrap;
+    }
+    
 }
