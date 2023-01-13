@@ -37,13 +37,14 @@ MARKUP PAGE
 **********/
 header{
     background-color: black;
-    width: 230px;
+    overflow: hidden;
+    flex-basis: 230px;
 }
 
 main{
     background-color: #141922;
-    overflow-y: scroll;
-    width: calc( 100% - 230px);
+    overflow: auto;
+    flex-basis: calc( 100% - 230px);
 }
 
 header, main{
@@ -59,15 +60,18 @@ aside{
     display: flex;
 }
 
+header,main,aside{
+    padding: 20px;
+}
 /**********************
 MEDIAQUERY MARKUP PAGE
 ***********************/
 @media screen and (max-width: 552px ) {
     header{
-        width: 50px;
+        flex-basis: 50px;
     }
     main{
-        width: calc( 100% - 50px);
+        flex-basis: calc( 100% - 50px);
     }
 }
 
@@ -80,9 +84,8 @@ ASIDE
 }
 
 .cover-song{
-    padding: 21px;
+    height: 42px;
     display: flex;
-    height: 90px;
     color: var(--grey)
 }
 
@@ -124,10 +127,10 @@ ASIDE
 }
 .playerbutton{
     gap: 22px;
-    padding: 12px 0;
     display: flex;
     justify-content: center;
-    font-size: 36px;
+    flex-shrink: 0;
+    font-size: 28px;
     color: white;
 }
 
@@ -145,3 +148,6 @@ ASIDE
     }
     
 }
+
+.volume{
+    display: flex;}
