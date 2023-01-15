@@ -11,6 +11,9 @@ GENERIC RULE
     --grey:#7A7D81;
     --darkGrey:#282828;
     --green:#ADFF2F;
+    --unhover-color:#717171;
+    --over-color:white;
+    --padding-page:20px
 }
 body{
     font-family: 'Open Sans', sans-serif;}
@@ -30,9 +33,11 @@ a {
     color: currentColor;
 }
 .row{
-    display: flex;
+    display: flex ;
 }
-
+.rounded{
+    border-radius: 50%;
+}
 /**********
 MARKUP PAGE
 **********/
@@ -42,11 +47,13 @@ header{
     flex-basis: 230px;
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
 main{
     background-color: #141922;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     flex-basis: calc( 100% - 230px);
 }
 
@@ -64,7 +71,7 @@ aside{
 }
 
 header,main,aside{
-    padding: 20px;
+    padding: var(--padding-page);
 }
 /**********************
 MEDIAQUERY MARKUP PAGE
@@ -79,35 +86,39 @@ MEDIAQUERY MARKUP PAGE
 }
 
 /****
-ASIDE 
+ASIDE
 *****/
 
-/* LEFT SECTION */
+/* LEFT SECTION  */
 .row-player{
     justify-content: space-between;
 }
 
 .cover-song{
-    height: 42px;
+    align-items: center;
     display: flex;
     color: var(--grey)
 }
 
+.cover-song-img img{
+    max-height: 42px;
+}
 .song-info{
-    margin:0 13px;
+    padding:0 1em;
 }
 
 .cover-song-button{
     align-content: center;
     display: flex;
-    gap:13px;
+    gap: 12px;
 }
 
-
-/* CENTRAL SECTION */
+/* CENTRAL SECTION   */
 
 .player-song{
-    flex-basis: 30%;
+    width: 30%;
+    max-width: 532px;
+    flex-grow: 1;
 }
 
 .playerbutton{
@@ -118,6 +129,7 @@ ASIDE
     font-size: 28px;
     color: white;
 }
+
 
 .player-time{
     color: white;
@@ -133,62 +145,79 @@ ASIDE
     background-color: var(--grey);
 }
 
-/* RIGHT SECTION */
+/* RIGHT SECTION  */
 
 .share-song{
+    gap: 8px;
+    flex-basis: 10%;
     display: flex;
-    padding: 4px;
-    align-content: center;
     justify-content: space-between;
-    font-size: 18px;
+    align-items: center;
     color: white;
 }
 .volume{
     display: flex;
-    justify-content: space-between;
-    align-content: center;
-    flex-grow: 1;
-
-
+    width: 100%;
+    gap: 6px;
 }
+
+
 .volume-slider{
-    flex-basis: 100%;
+    width: 100%;
+    max-width: 100px;
+    align-self:center ;
     background-color: var(--grey);
     border-radius: 20px;
     height: 4px;
-
 }
 
-/***************** 
-MEDIA QUERY ASIDE 
+
+/*****************
+MEDIA QUERY ASIDE
 ******************/
 
+@media screen and (max-width:878px) {
+    .row-player{
+        gap: 10px;
+    }
+}
 @media screen and (max-width: 639px) {
     .cover-song-button{
         flex-wrap: wrap;
-    }    
-    
-}    
+    }
+    .cover-song,
+    .player-song,
+    .share-song{
+        width: calc(30%);
+    }
+    .cover-song-img img{
+        width: 100%;
+    }
+
+}
 
 
-/************* 
-HEADER SECTION 
+/*************
+HEADER SECTION
 **************/
 
-/* logo */
+/* LOGO */
 
 .logo-s{
     display: none;
-}    
+}
+
 /* HEADER BUTTON */
 .header-button{
     color: white;
-}    
+}
 .home,
 .serch,
 .library{
     display: flex;
     padding: 6px;
+    opacity: 0.5;
+    gap: 10px;
 }
 
 .home img,
@@ -197,13 +226,16 @@ HEADER SECTION
     width: 20%;
 }
 
+.button-text{
+    align-self: center;
+}
 /******************
 MEDIA QUERY HEADER
 *******************/
 @media screen and (max-width:552px) {
     header{
         padding: 7px;
-    }    
+    }
     .logo-s{
         display: block;
     }
@@ -215,12 +247,10 @@ MEDIA QUERY HEADER
     .library img{
         width: 100%;
     }
-    .home p,
-    .serch p,
-    .library p{
+.button-text{
         display: none;
     }
-}    
+}
 
 
 /* HOVER HEADER BAR */
@@ -228,92 +258,258 @@ MEDIA QUERY HEADER
 .serch:hover,
 .library:hover{
     border-left: 2px solid var(--green);
+    opacity: 1;
+}
+
+/* PLAYLIST */
+
+.playlist{
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 
 
+.playlist-title{
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
 
-.playlist{
-    min-height: 300px;
-    background-color: green;
-}        
+.new-playlist{
+    display: flex;
+}
 
+.add-playlist{
+    height: 37px;
+    width: 37px;
+    background-color:#A3A3A3;
+    font-size: 32px;
+    line-height: 37px;
+    text-align: center;
+    font-weight: bold;
+    color: #6F6F6F;
+}
+.add-playlist-text{
+    margin-left:13px;
+    line-height: 37px;
+}
+
+
+.ul-playlist{
+    display: flex;
+    gap:26px ;
+    flex-wrap: wrap;
+}
+
+
+/*******************
+MEDIAQUERY PLAYLIST
+*******************/
+@media screen and (max-width:552px) {
+    .playlist{
+        display: none;
+    }
+}
+
+
+/* BOTTOM PLAYLIST*/
 
 .install-app{
-    min-height: 30px;
-    background-color: orange;
     margin-top: auto;
-}        
+    padding-bottom:12px;
+    display: flex;
+    gap:11px;
+    color: white;
+    border-bottom: 1px solid  white;
+}
+
 
 .profile{
     min-height: 30px;
-    background-color: aqua;
-}            
+    gap: 9px;
+    display: flex;
+}
 
+.profile-img{
+    background-color: #808080;
+    height: 25px;
+    width: 25px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-.share-song{
-    justify-content: flex-end;
-    flex-shrink: 0;
+.name-profile{
     color: white;
+    font-weight: bold;
+}
+
+
+/* potrei agogingere una classe a questi elementi con queste proprietà */
+
+
+.add-playlist-text,
+.install-txt,
+.ul-playlist li a{
+    color: var(--unhover-color);
+    font-weight: bold;
+}
+
+.add-playlist-text:hover,
+.install-txt:hover,
+.ul-playlist li a:hover{
+    color: var(--over-color);
+}
+
+/**************************
+MEDIA QUERY BOTTOM  HEADER
+***************************/
+@media screen and (max-width:552px) {
+    .install-app{
+        border-bottom: none;
+    }
+    .install-txt{
+        display: none;
+    }
+    .name-profile{
+        display: none;
+    }
+    .profile,
+    .install-app{
+        justify-content: center;
+    }
+}
+
+/****
+MAIN
+*****/
+
+/* TOP MAIN */
+.button{
     display: flex;
-    align-items: center;
-    flex-basis: 20%;
+    justify-content: flex-end;
+    padding:20px 0;
+    margin: -20px -20px 0 -20px;
+    opacity: 0.5;
+    background-color:currentColor;
+}
+
+.button>a{
+    border: 1px solid white;
+    border-radius: 50px;
+    color: white;
+    padding: 15px;
+    text-transform: uppercase;
+}
+
+.button>a:hover{
+    scale: 1.1;
+}
+
+.header-nav{
+    padding: 23px 0;
+    margin: 0 auto;
+    font-size: 14px;
+    color: white;
+    text-transform: uppercase;
+    gap: 25px;
+    max-width: 621px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-ul{
+    display: contents;
+}
+
+/* MEDIA QUERY TOP MAIN */
+@media  screen and (max-width:878px) {
+    .header-nav{
+        justify-content: center;
+    }
+}
+
+/* RECENT PLAYED */
+.slider{
+    margin: 15px 0 ;
+}
+.title{
+    color: white;
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.album-carousel{
+    gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.album{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: calc((100% / 6 )  - 15px);
+}
+
+.album>p{
+    text-align: center;
+}
+
+
+@media screen and (max-width: 878px) {
+    .album{
+        width:calc((100% /  4) - 9px);
+    }
+    
+    .album-carousel{
+        gap: 9px;
+        justify-content: flex-start;
+    }
+}
+@media screen and (max-width: 639px) {
+    .album{
+        width: calc(50% - 9px);
+    }
+}
+
+.album-title{
+    margin: 23px 0 13px ;
+    color: white;
     font-size: 18px;
-    gap:25px
-
+    font-weight: bold;
+}
+.album-subtitle{
+    color: var(--grey);
 }
 
 
-
-
-
-.volume{
-    display: flex;
-    flex-grow: 1;
+.album-img{
+    display: contents;
 }
-.volume-slider{
-    height: 4px;
-    width: 100%;
-    background-color: var(--grey);
-    border-radius: 20px;
-    max-width: 117px;
-} */
+
+
+.album img:hover{
+    opacity: 0.5;
+}
+.album i{
+    font-size: 10rem;
+    color:white;
+    position: absolute;
+    bottom:50%;
+    left: calc(50% - 75px);
+    display: none;
+}
+.album img:hover + .icon{
+    display: inline;
+}
+/*  chiedere a Gianluca se è meglio ripetere album-img con le stesse proprietà di una classe che sta più sopra  tenendo il css diviso per
+zone o raggruppare le proprietà */
+
+.subtitle-section{
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--grey);
+    padding: 10px 0;
+}

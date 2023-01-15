@@ -11,6 +11,7 @@
 
 <body>
     <div class="screen-container">
+        <!-- START HEADER (left bar) -->
         <header>
             <div class="logo">
                 <img src="./img/logo.svg" alt="" class="logo-xl">
@@ -20,30 +21,174 @@
                 <ul>
                     <li class="home">
                         <img src="./img/home.svg" alt="">
-                        <p>Home</p>
+                        <p class="button-text">Home</p>
                     </li>
                     <li class="serch">
                         <img src="./img/search.svg" alt="">
-                        <p>Cerca</p>
+                        <p class="button-text">Cerca</p>
                     </li>
                     <li class="library">
                         <img src="./img/libreria.svg" alt="">
-                        <p>La tua libreria</p>
+                        <p class="button-text">La tua libreria</p>
                     </li>
                 </ul>
             </div>
-            <div class="playlist"></div>
-            <div class="install-app"></div>
-            <div class="profile"></div>
-        </header> 
+            <div class="playlist">
+                <p class="playlist-title">playlist</p>
+                <div class="new-playlist">
+                    <div class="add-playlist"> &plus;</div>
+                    <p class="add-playlist-text">Crea Playlist</p>
+                </div>
+                <ul class="ul-playlist">
+                    <li>
+                        <a href="#">Nuova Playlist</a>
+                    </li>
+                    <li>
+                        <a href="#">Nuova Playlist</a>
+                    </li>
+                    <li>
+                        <a href="#">Nuova Playlist</a>
+                    </li>
+                    <li>
+                        <a href="#">Nuova Playlist</a>
+                    </li>
+                    <li>
+                        <a href="#">Nuova Playlist</a>
+                    </li>
+                    <li>
+                        <a href="#">Nuova Playlist</a>
+                    </li>
+                    <li>
+                        <a href="#">Nuova Playlist</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="install-app">
+                <a href="#">
+                    <i class="fa-solid fa-circle-arrow-down"></i>
+                </a>
+                <a href="#" class="install-txt">Install app</a>
+            </div>
+            <div class="profile">
+                <img src="./img/profile.svg" alt="" class="profile-img">
+                <p class="name-profile">John Doe</p>
+            </div>
+        </header>
+        <!-- END HEADER (left bar) -->
         <main>
-
+            <div class="button">
+                <a href="">effettua l'upgrade</a>
+            </div>
+            <nav class="header-nav">
+                <ul class="nav-ul">
+                    <li><a href="">in evidenza</a></li>
+                    <li><a href="">podcast</a></li>
+                    <li><a href="">classifiche</a></li>
+                    <li><a href="">generi e mood</a></li>
+                    <li><a href=""> nuove uscite</a></li>
+                    <li><a href="">scopri</a></li>
+                </ul>
+            </nav>
+            <!-- START RECENT PLAYED -->
+            <section class="slider">
+                <h2 class="title">Recent pleyed</h2>
+                <div class="album-carousel">
+                    <div class="album">
+                        <a href="" class="album-img">
+                            <img src="./img/metal_lifting.jpg" alt="">
+                            <i class="fa-regular fa-circle-play icon"></i>
+                        </a>
+                        <p class="album-title">Heavy Metal</p>
+                        <p class="album-subtitle">Subtitle</p>
+                    </div>
+                    <div class="album">
+                        <a href="" class="album-img">
+                            <img src="./img/stranger.jpeg" alt="">
+                            <i class="fa-regular fa-circle-play icon"></i>
+                        </a>
+                        <p class="album-title">Stranger Things, vol.1 (a Netflix Original Series Soundtrack)</p>
+                        <p class="album-subtitle">Kyle Dixon & Micheal Stein</p>
+                    </div>
+                    <div class="album">
+                        <a href="" class="album-img">
+                            <img src="./img/aquietplace.jpeg" alt="">
+                            <i class="fa-regular fa-circle-play icon"></i>
+                        </a>
+                        <p class="album-subtitle">Subtitle</p>
+                    </div>
+                    <div class="album">
+                        <a href="" class="album-img">
+                            <img src="./img/split.jpeg" alt="">
+                            <i class="fa-regular fa-circle-play icon"></i>
+                        </a>
+                        <p class="album-subtitle">Subtitle</p>
+                    </div>
+                    <div class="album">
+                        <a href="" class="album-img">
+                            <img src="./img/cure.jpeg" alt="">
+                            <i class="fa-regular fa-circle-play icon"></i>
+                        </a>
+                        <p class="album-title">A cure for wellness</p>
+                        <p class="album-subtitle">Subtitel</p>
+                    </div>
+                    <div class="album">
+                        <a href="" class="album-img">
+                            <img src="./img/sinister.jpeg" alt="">
+                            <i class="fa-regular fa-circle-play icon"></i>
+                        </a>
+                        <p class="album-subtitle">Subtitle</p>
+                    </div>
+                </div>
+            </section>
+            <section class="slider">
+                <h2 class="title">Creato per John Doe</h2>
+                <p class="subtitle-section">Più ascolti, più accurati saranno i suggerimenti</p>
+                <div class="album-carousel">
+                    <div class="album">
+                        <a href="" class="album-img">
+                            <img src="./img/radar.jpeg" alt="">
+                            <i class="fa-regular fa-circle-play icon"></i>
+                        </a>
+                        <p class="album-title">Release Radar</p>
+                    </div>
+                    <div class="album">
+                        <a href="" class="album-img">
+                            <img src="./img/mixdaily.jpeg" alt="">
+                            <i class="fa-regular fa-circle-play icon"></i>
+                        </a>
+                        <p class="album-title">Daily Mix 1</p>
+                    </div>
+                </div>
+            </section>
+            <section class="slider">
+                <h2 class="title">Artisti più popolari</h2>
+                <p class="subtitle-section">Più ascolti, più accurati saranno i suggerimenti</p>
+                <div class="album-carousel">
+                    <div class="album">
+                        <a href="" class="album-img">
+                            <img src="./img/youg.jpeg" alt="" class="rounded">
+                            <i class="fa-regular fa-circle-play icon"></i>
+                        </a>
+                        <p class="album-title">Release Radar</p>
+                    </div>
+                    <div class="album">
+                        <a href="" class="album-img">
+                            <img src="./img/einaudi.jpeg" alt="" class="rounded">
+                            <i class="fa-regular fa-circle-play icon"></i>
+                        </a>
+                        <p class="album-title">Daily Mix 1</p>
+                    </div>
+                </div>
+            </section>
         </main>
     </div>
-    <aside>
+    <!-- START ASIDE (player bar) -->
+    <aside> 
         <div class="row row-player">
             <div class="col cover-song ">
-                <img src="./img/sinister.jpeg" alt="">
+                <div class="cover-song-img">
+                    <img src="./img/sinister.jpeg" alt="">
+                </div>
                 <div class="song-info">
                     <p>Sinister</p>
                     <p>Brano Nome</p>
@@ -75,11 +220,14 @@
                     <i class="fa-solid fa-list-ul"></i>
                 </div>
                 <div class="volume">
-                    <i class="fa-solid fa-volume-high"></i>
+                    <div class="volume-button">
+                        <i class="fa-solid fa-volume-high"></i>
+                    </div>
                     <div class="volume-slider"></div>
                 </div>
-
             </div> 
+        </div> 
     </aside>
+    <!-- END ASIDE (player bar) -->
 </body>
 </html>
