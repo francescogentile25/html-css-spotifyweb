@@ -89,6 +89,13 @@ MEDIAQUERY MARKUP PAGE
 ASIDE
 *****/
 
+.cover-song,
+.share-song{
+    width: 20%;
+}
+.player-song{
+    width: 40%;
+}
 /* LEFT SECTION  */
 .row-player{
     justify-content: space-between;
@@ -116,7 +123,6 @@ ASIDE
 /* CENTRAL SECTION   */
 
 .player-song{
-    width: 30%;
     max-width: 532px;
     flex-grow: 1;
 }
@@ -125,7 +131,6 @@ ASIDE
     gap: 22px;
     display: flex;
     justify-content: center;
-    flex-shrink: 0;
     font-size: 28px;
     color: white;
 }
@@ -149,7 +154,6 @@ ASIDE
 
 .share-song{
     gap: 8px;
-    flex-basis: 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -179,6 +183,11 @@ MEDIA QUERY ASIDE
 @media screen and (max-width:878px) {
     .row-player{
         gap: 10px;
+    }
+    .cover-song,
+    .player-song,
+    .share-song{
+        width: calc(30%);
     }
 }
 @media screen and (max-width: 639px) {
@@ -423,6 +432,9 @@ MAIN
     display: contents;
 }
 
+.header-nav a:hover{
+    border-bottom: solid var(--green);
+}
 /* MEDIA QUERY TOP MAIN */
 @media  screen and (max-width:878px) {
     .header-nav{
