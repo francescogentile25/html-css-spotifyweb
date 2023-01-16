@@ -89,10 +89,6 @@ MEDIAQUERY MARKUP PAGE
 ASIDE
 *****/
 
-.cover-song,
-.share-song{
-    width: 20%;
-}
 .player-song{
     width: 40%;
 }
@@ -108,8 +104,9 @@ ASIDE
 }
 
 .cover-song-img img{
-    max-height: 42px;
+    height: 42px;
 }
+
 .song-info{
     padding:0 1em;
 }
@@ -124,11 +121,10 @@ ASIDE
 
 .player-song{
     max-width: 532px;
-    flex-grow: 1;
 }
 
 .playerbutton{
-    gap: 22px;
+    gap: 15px;
     display: flex;
     justify-content: center;
     font-size: 28px;
@@ -155,20 +151,19 @@ ASIDE
 .share-song{
     gap: 8px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     color: white;
 }
 .volume{
     display: flex;
-    width: 100%;
     gap: 6px;
+    width: 50%;
 }
 
 
 .volume-slider{
-    width: 100%;
-    max-width: 100px;
+    width: 100px;
     align-self:center ;
     background-color: var(--grey);
     border-radius: 20px;
@@ -184,11 +179,6 @@ MEDIA QUERY ASIDE
     .row-player{
         gap: 10px;
     }
-    .cover-song,
-    .player-song,
-    .share-song{
-        width: calc(30%);
-    }
 }
 @media screen and (max-width: 639px) {
     .cover-song-button{
@@ -197,12 +187,9 @@ MEDIA QUERY ASIDE
     .cover-song,
     .player-song,
     .share-song{
-        width: calc(30%);
+        width: calc(100% / 3);
     }
-    .cover-song-img img{
-        width: 100%;
-    }
-
+    
 }
 
 
