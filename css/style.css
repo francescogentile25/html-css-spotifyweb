@@ -104,11 +104,12 @@ ASIDE
 }
 
 .cover-song-img img{
-    height: 42px;
+    width: 42px;
 }
 
 .song-info{
     padding:0 1em;
+    font-size: 14px;
 }
 
 .cover-song-button{
@@ -133,7 +134,7 @@ ASIDE
 
 
 .player-time{
-    gap: 24px;
+    gap: 10px;
     color: white;
     display: flex;
     align-items:center;
@@ -141,16 +142,16 @@ ASIDE
 .progress-time{
     width: 30%;
     background-color: white;
-    height: 4px;
-    border-radius: 50px;
 }
 .time-line{
     flex-grow: 1;
-    border-radius: 50px;
-    height: 4px;
     background-color: var(--grey);
 }
 
+.style-bar{
+    height: 4px;
+    border-radius: 50px;
+}
 /* RIGHT SECTION  */
 
 .share-song{
