@@ -120,7 +120,7 @@ ASIDE
 /* CENTRAL SECTION   */
 
 .player-song{
-    max-width: 532px;
+    flex-basis: 35%;
 }
 
 .playerbutton{
@@ -133,14 +133,19 @@ ASIDE
 
 
 .player-time{
+    gap: 24px;
     color: white;
     display: flex;
-    justify-content: space-between;
     align-items:center;
 }
+.progress-time{
+    width: 30%;
+    background-color: white;
+    height: 4px;
+    border-radius: 50px;
+}
 .time-line{
-    width: 100%;
-    margin: 0 25px ;
+    flex-grow: 1;
     border-radius: 50px;
     height: 4px;
     background-color: var(--grey);
