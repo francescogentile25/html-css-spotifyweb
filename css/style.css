@@ -111,6 +111,10 @@ ASIDE
     padding:0 1em;
     font-size: 14px;
 }
+.song-artist{
+    color: white;
+    font-weight:bold;
+}
 
 .cover-song-button{
     align-content: center;
@@ -140,8 +144,11 @@ ASIDE
     align-items:center;
 }
 .progress-time{
-    width: 30%;
+    width: 40%;
     background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 .time-line{
     flex-grow: 1;
@@ -152,6 +159,15 @@ ASIDE
     height: 4px;
     border-radius: 50px;
 }
+.play{
+    margin: 0 10px;
+}
+
+.prova{
+    display:none !important;
+    color: var(--green);
+}
+
 /* RIGHT SECTION  */
 
 .share-song{
@@ -172,10 +188,40 @@ ASIDE
     width: 100px;
     align-self:center ;
     background-color: var(--grey);
-    border-radius: 20px;
-    height: 4px;
 }
 
+
+/* HOVER ASIDE SECTION */
+.song-track:hover{
+    text-decoration: underline;
+}
+.cover-song-button i:hover{
+    color: white;
+}
+.player-time:hover .progress-time,
+.volume:hover .progress-time{
+    background-color: var(--green);
+    animation: progress 3s linear;
+}
+/* .volume:hover .progress-time{
+    background-color: var(--green);
+} */
+.player-time:hover .prova,
+.volume:hover .prova
+{     /*  CAMBIARE CLASSE PROVA*/
+    display: block !important; 
+}
+.play:hover{
+    transform:scale(1.2);
+}
+
+@keyframes progress {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 40%;}
+}
 
 /*****************
 MEDIA QUERY ASIDE
