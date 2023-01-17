@@ -542,7 +542,8 @@ MAIN
 
 
 .album-img{
-    display: contents;
+    position: relative;
+    /* display: contents; */
 }
 
 
@@ -550,17 +551,20 @@ MAIN
     opacity: 0.5;
 }
 .album i{
-    font-size: 10rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 90px;
     color:var(--white);
     position: absolute;
-    bottom:50%;
-    left: calc(50% - 75px);
+    /* bottom:50%;
+    left: calc(50% - 75px); */
     display: none;
 }
-.album img:hover + .icon{
-    display: inline;
+.album:hover .icon{
+    display: block;
 }
-/*  chiedere a Gianluca se è meglio ripetere album-img con le stesse proprietà di una classe che sta più sopra  tenendo il css diviso per
+/*  chiedere se è meglio ripetere album-img con le stesse proprietà di una classe che sta più sopra  tenendo il css diviso per
 zone o raggruppare le proprietà */
 
 .subtitle-section{
