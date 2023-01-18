@@ -456,16 +456,19 @@ MAIN
 
 .button>a:hover{
     scale: 1.1;
+    background-color: #0c1529;
+    transition: 1s;
 }
 
 .header-nav{
+    font-weight: bold;
     padding: 23px 0;
     margin: 0 auto;
     font-size: 14px;
-    color:var(--white);
+    color:var(--unhover-color);
     text-transform: uppercase;
     gap: 25px;
-    max-width: 621px;
+    max-width: 630px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -516,6 +519,9 @@ MAIN
 
 .nav-li:hover .active{
     display: block;
+}
+.nav-li:hover{
+    color: var(--white);
 }
 /* MEDIA QUERY TOP MAIN */
 @media  screen and (max-width:878px) {
